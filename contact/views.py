@@ -19,7 +19,7 @@ def contact(request):
 
             send_mail(
                 'Boilerplate',
-                render_to_string('contact.html', context),
+                render_to_string('new_contact_email.html', context),
                 from_email,
                 ['paulrogers909@pm.me'],
                 fail_silently=False,
