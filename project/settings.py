@@ -81,20 +81,21 @@ STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "staticfiles")
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
-LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 
-EMAIL_BACKEND = config(
-    "EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"
-)
-EMAIL_HOST = config("EMAIL_HOST", default="")
-EMAIL_PORT = config("EMAIL_PORT", default=587, cast=int)
-EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=True, cast=bool)
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-SENDGRID_API_KEY = config("SENDGRID_API_KEY", default="")
+# EMAIL_BACKEND = config(
+#     "EMAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"
+# )
+# EMAIL_HOST = config("EMAIL_HOST", default="")
+# EMAIL_PORT = config("EMAIL_PORT", default=587, cast=int)
+# EMAIL_USE_TLS = config("EMAIL_USE_TLS", default=True, cast=bool)
+
+# SENDGRID_API_KEY = config("SENDGRID_API_KEY", default="")
 # for testing locally, = False
-SENDGRID_SANDBOX_MODE_IN_DEBUG = False
+# SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 
 DEFAULT_FROM_EMAIL = "Boilerplate <noreply@boilerplate.com>"
 EMAIL_SUBJECT_PREFIX = "[Boilerplate] "

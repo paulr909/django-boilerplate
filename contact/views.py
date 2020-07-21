@@ -18,8 +18,8 @@ def contact(request):
                        }
 
             send_mail(
-                'All Web Contact Form',
-                render_to_string('new_contact_email.html', context),
+                'Boilerplate',
+                render_to_string('contact.html', context),
                 from_email,
                 ['paulrogers909@pm.me'],
                 fail_silently=False,
