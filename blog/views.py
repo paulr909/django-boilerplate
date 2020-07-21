@@ -4,8 +4,6 @@ from .models import Post
 
 class BlogView(ListView):
     model = Post
-    context_object_name = 'posts'
-    template_name = 'blog.html'
+    context_object_name = "posts"
+    template_name = "blog.html"
     paginate_by = 5
-
-
