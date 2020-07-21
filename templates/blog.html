@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+{% block content %}
+    <h1>Blog</h1>
+    {% for item in posts %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text">{{ item.post }}</p>
+                <small class="badge badge-primary">{{ item.created_at }}</small>
+                <a href="{{ item.link }}" target="_blank"
+                   class="btn btn-sm btn-outline-primary float-right truncate">{{ item.link }}</a>
+            </div>
+        </div>
+        <br>
+    {% empty %}
+        <h2 class="text-center"><span class="badge badge-info">No data to display</span></h2>
+    {% endfor %}
+    {% include 'includes/pagination.html' %}
+{% endblock %}

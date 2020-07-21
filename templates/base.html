@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148348042-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-148348042-1');
+    </script>
+    <meta charset="utf-8">
+    <title>{% block title %}All Web XYZ{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static "favicons/apple-icon-57x57.png" %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static "favicons/apple-icon-60x60.png" %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static "favicons/apple-icon-72x72.png" %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static "favicons/apple-icon-76x76.png" %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static "favicons/apple-icon-114x114.png" %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static "favicons/apple-icon-120x120.png" %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static "favicons/apple-icon-144x144.png" %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static "favicons/apple-icon-152x152.png" %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "favicons/apple-icon-180x180.png" %}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{% static "favicons/android-icon-192x192.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "favicons/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static "favicons/favicon-96x96.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "favicons/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "favicons/manifest.json" %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    {% block stylesheet %}{% endblock %}
+</head>
+<body>
+{% block body %}
+    <div class="content">
+        <div class="container">
+            <div class="text-center">
+                {% include 'includes/nav.html' %}
+            </div>
+            {% block header %}
+            {% endblock %}
+
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    {% include 'includes/footer.html' %}
+{% endblock body %}
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/hide-message.js' %}"></script>
+{% block javascript %}{% endblock %}
+</body>
+</html>

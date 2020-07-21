@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Django Boilerplate</h1>
+            <h2>Base Web Site Built with Django v3</h2>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static "img/laptop-5.jpg" %}" alt="brain" class="img-fluid laptop-img">
+        </div>
+        <div class="col-md-6">
+            <h2>Industries covered: Media, Finance, Technology and all that jazz...</h2>
+            <p>Technology development and its disruptive effects continue to evolve.</p>
+        </div>
+    </div>
+{% endblock %}

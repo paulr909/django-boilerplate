@@ -1,0 +1,114 @@
+:root {
+    font-size: 22px;
+}
+
+body {
+    padding-top: 4rem;
+    background: #f1f1f1;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.content {
+    margin: 1rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+a:hover {
+    color: #812187;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #812187;
+}
+
+th {
+    color: #812187;
+}
+
+td {
+    color: #2c3e50;
+}
+
+label {
+    margin-bottom: 0;
+}
+
+.page-item.active .page-link {
+    background-color: #812187;
+    border-color: #fff;
+}
+
+.page-link {
+    color: #812187;
+    padding: .3rem .5rem;
+}
+
+.page-link:focus, .page-link:hover {
+    color: #2c3e50;
+}
+
+.breadcrumb {
+    background: none;
+    border-radius: 0;
+}
+
+.breadcrumb-item a {
+    color: #812187;
+}
+
+.breadcrumb-item a:hover {
+    color: #007bff;
+}
+
+.breadcrumb-item.active {
+    color: #812187;
+}
+
+.laptop-img {
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border-radius: 0;
+}
+
+.card-body p a {
+    color: #812187;
+    text-decoration: underline;
+}
+
+.card-body p a:hover, .card-body p a:focus {
+    color: #007bff;
+}
+
+.card-body img {
+    max-height: 24rem;
+    float: right;
+}
+
+.form-control {
+    padding: .175rem .75rem;
+    border-radius: 0;
+}
+
+.editor-toolbar {
+    background: #d9d9d9;
+}
+
+.gravatar {
+    width: 3rem;
+}
+
+.footer {
+    height: 3rem;
+}
+
+.truncate {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
