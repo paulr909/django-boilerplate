@@ -25,8 +25,7 @@ def contact(request):
                 fail_silently=False,
             )
             messages.success(request, 'Form sent, Thank you!')
-            form.save()
-            form = ContactForm()
+            form.save(); form = ContactForm()
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
