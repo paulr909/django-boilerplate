@@ -8,11 +8,6 @@ body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-.content {
-    margin: 1rem 0;
-    min-height: calc(100vh - 200px);
-}
-
 a:hover {
     color: #812187;
     text-decoration: none;

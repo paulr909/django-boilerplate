@@ -1,24 +1,25 @@
-
 {% extends 'base.html' %}
 
 {% block title %}
-    About Us
+    Popular Frameworks
 {% endblock %}
 
 {% block content %}
-    <h1>About Us</h1>
-    {% for item in items %}
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{{ item.name }}</h5>
-                <p class="card-text">{{ item.description }}</p>
-                <a href="{{ item.link }}" target="_blank"
-                   class="btn btn-sm btn-outline-primary float-right truncate">{{ item.link }}</a>
+    <div class="row">
+        <h1>Popular Frameworks</h1>
+        {% for item in items %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+                    <a href="{{ item.link }}" target="_blank"
+                       class="btn btn-sm btn-outline-primary float-right truncate">{{ item.link }}</a>
+                </div>
             </div>
-        </div>
-        <br>
-    {% empty %}
-        <h2 class="text-center"><span class="badge badge-info">No data to display</span></h2>
-    {% endfor %}
-    {% include 'includes/pagination.html' %}
+            <br>
+        {% empty %}
+            <h2 class="text-center"><span class="badge badge-info">No data to display</span></h2>
+        {% endfor %}
+        {% include 'includes/pagination.html' %}
+    </div>
 {% endblock %}

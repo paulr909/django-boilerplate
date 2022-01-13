@@ -5,20 +5,24 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Blog</h1>
-    {% for item in posts %}
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">{{ item.name }}</h5>
-                <p class="card-text">{{ item.post }}</p>
-                <small class="badge badge-primary">{{ item.created_at }}</small>
-                <a href="{{ item.link }}" target="_blank"
-                   class="btn btn-sm btn-outline-primary float-right truncate">{{ item.link }}</a>
+    <div class="row">
+        <h1>Blog</h1>
+        {% for item in posts %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.post }}</p>
+                    <small>
+                      <i class="bi-alarm" style="font-size: 1.1rem; color: cornflowerblue;"></i>
+                        {{ item.created_at }}</small>
+                    <a href="{{ item.link }}" target="_blank"
+                       class="btn btn-sm btn-outline-primary float-right truncate">{{ item.link }}</a>
+                </div>
             </div>
-        </div>
-        <br>
-    {% empty %}
-        <h2 class="text-center"><span class="badge badge-info">No data to display</span></h2>
-    {% endfor %}
-    {% include 'includes/pagination.html' %}
+            <br>
+        {% empty %}
+            <h2 class="text-center"><span class="badge badge-info">No data to display</span></h2>
+        {% endfor %}
+        {% include 'includes/pagination.html' %}
+    </div>
 {% endblock %}
