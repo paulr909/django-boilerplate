@@ -19,7 +19,7 @@ def contact(request):
                 "Boilerplate",
                 render_to_string("new_contact_email.html", context),
                 from_email,
-                ["paulrogers909@pm.me"],
+                ["paulr909@proton.me"],
                 fail_silently=False,
             )
             messages.success(request, "Form sent, Thank you!")
