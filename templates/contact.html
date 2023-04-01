@@ -7,41 +7,25 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-md-6 mb-3">
-            <h1>Contact Form</h1>
-            {% if messages %}
-                <ul class="messages list-unstyled alert alert-success">
-                    {% for message in messages %}
-                        <li{% if message.tags %}
-                            class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            <form method="post" novalidate>
+        <div class="offset-4 col-md-4">
+            <h1 class="text-center">Contact Form</h1>
+            <form method="post" novalidate class="mb-3">
                 {% csrf_token %}
                 {% include 'includes/form.html' %}
                 <button type="submit" class="btn btn-sm btn-outline-primary">Send
                 </button>
             </form>
-        </div>
-        <div class="col-md-6">
-            <h2>Skill Set</h2>
-            <ul>
-                <li>Code Python (PyCharm IDE) along with Django, Django REST framework
-                    plus Flask.
-                </li>
-                <li>HTML5, CSS3, plus the use of CSS Modules, Bootstrap.
-                </li>
-                <li>JavaScript frameworks: React, Highcharts, Chart.js, Cypress.</li>
-                <li>Database technologies: Postgres, MySQL.</li>
-                <li>Use of command line tools.</li>
-                <li>Linux, macOS, Git (GitHub / GitLab / BitBucket), Unit Testing,
-                    Gunicorn, NGINX, Continuous Integration, Docker, AWS, Digital Ocean.
-                </li>
-            </ul>
-            <p>Experienced in developing analytics dashboards and auditing software
-                for clients used globally, plus web development spanning various
-                industries.</p>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show"
+                         role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close">
+                        </button>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
         </div>
     </div>
 {% endblock %}
