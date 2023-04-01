@@ -3,7 +3,7 @@
 }
 
 body {
-    padding-top: 4rem;
+    min-height: 100vh;
     background: #f1f1f1;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -45,7 +45,7 @@ label {
 
 .breadcrumb {
     background: none;
-    border-radius: 0;
+    border-radius: .15rem;
 }
 
 .breadcrumb-item a {
@@ -60,13 +60,8 @@ label {
     color: #812187;
 }
 
-.laptop-img {
-    max-height: 300px;
-    margin-bottom: 20px;
-}
-
 .card {
-    border-radius: 0;
+    border-radius: .15rem;
 }
 
 .card-body p a {
@@ -85,7 +80,7 @@ label {
 
 .form-control {
     padding: .175rem .75rem;
-    border-radius: 0;
+    border-radius: .15rem;
 }
 
 .editor-toolbar {
@@ -96,14 +91,14 @@ label {
     width: 3rem;
 }
 
-.footer {
-    height: 3rem;
-}
-
 .truncate {
     max-width: 250px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: inline-block;
+}
+
+.footer {
+    margin-top: 100px;
 }
