@@ -9,6 +9,7 @@ from .sitemaps import StaticViewSitemap
 sitemaps = {"static": StaticViewSitemap}
 
 urlpatterns = [
+    path("admin/", admin.site.urls),
     path("", include("home.urls")),
     path("", include("about.urls")),
     path("", include("blog.urls")),
@@ -19,5 +20,4 @@ urlpatterns = [
         {"sitemaps": sitemaps},
         name="django.contrib.sitemaps.views.sitemap",
     ),
-    path("admin/", admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

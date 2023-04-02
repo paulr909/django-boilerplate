@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Upload Cars
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="offset-lg-3 col-lg-6 offset-md-3 col-md-6 offset-sm-0 col-sm-1 offset-xs-0 col-xs-1">
+            <h1 class="text-center">Upload Cars</h1>
+            <form method="post" enctype="multipart/form-data" novalidate class="mb-3">
+                {% csrf_token %}
+                {% include 'includes/form.html' %}
+                <button type="submit" class="btn btn-sm btn-outline-primary">Send
+                </button>
+            </form>
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show"
+                         role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                aria-label="Close">
+                        </button>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
