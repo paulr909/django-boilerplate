@@ -60,9 +60,6 @@ label {
     color: #812187;
 }
 
-.card {
-}
-
 .card-body p a {
     color: #812187;
     text-decoration: underline;
@@ -70,11 +67,6 @@ label {
 
 .card-body p a:hover, .card-body p a:focus {
     color: #007bff;
-}
-
-.card-body img {
-    max-height: 24rem;
-    float: right;
 }
 
 .form-control {
