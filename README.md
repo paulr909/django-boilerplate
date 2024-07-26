@@ -1,7 +1,7 @@
 # Django - Boilerplate Project
 
-[![Python Version](https://img.shields.io/badge/python-3.10-brightgreen.svg)](https://python.org)
-[![Django Version](https://img.shields.io/badge/django-4.1.7-brightgreen.svg)](https://djangoproject.com)
+[![Python Version](https://img.shields.io/badge/python-3.11-brightgreen.svg)](https://python.org)
+[![Django Version](https://img.shields.io/badge/django-5.1-rc1-brightgreen.svg)](https://djangoproject.com)
 
 ## Django 4.1.7
 
