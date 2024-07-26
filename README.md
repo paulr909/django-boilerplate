@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.11-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-5.1-brightgreen.svg)](https://djangoproject.com)
 
-## Django 4.1.7
+## Django 5.1
 
 Run your app in a Virtual Environment: http://python-guide-ru.readthedocs.io/en/latest/dev/virtualenvs.html
 
